@@ -1,5 +1,5 @@
 //
-//  SCEasyTableViewManager.h
+//  SCETDataSourceCoordinator.h
 //  SCEasyTableView
 //
 //  Created by ty.Chen on 2020/11/16.
@@ -9,7 +9,7 @@
 #import "SCETDataSource.h"
 #import "SCETDelegate.h"
 
-@interface SCEasyTableViewManager : NSObject
+@interface SCETDataSourceCoordinator : NSObject
 
 @property (nonatomic, strong) SCETDataSource *dataSource;
 
@@ -31,17 +31,16 @@
                      dataSourceClass:(Class)dataSourceClass
                        delegateClass:(Class)delegateClass;
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems;
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems;
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
                      dataSourceClass:(Class)dataSourceClass;
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
                        delegateClass:(Class)delegateClass;
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
                               dataSourceClass:(Class)dataSourceClass
                                 delegateClass:(Class)delegateClass;
 
 @end
-

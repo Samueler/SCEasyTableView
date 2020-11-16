@@ -1,13 +1,13 @@
 //
-//  SCEasyTableViewManager.m
+//  SCETDataSourceCoordinator.m
 //  SCEasyTableView
 //
 //  Created by ty.Chen on 2020/11/16.
 //
 
-#import "SCEasyTableViewManager.h"
+#import "SCETDataSourceCoordinator.h"
 
-@implementation SCEasyTableViewManager
+@implementation SCETDataSourceCoordinator
 
 - (instancetype)initWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems {
     return [self initWithSectionItems:sectionItems dataSourceClass:nil delegateClass:nil];
@@ -39,19 +39,19 @@
     return self;
 }
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems {
-    return [self easyTableViewWithSectionItems:sectionItems dataSourceClass:nil delegateClass:nil];
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems {
+    return [self dataSourceCoordinatorWithSectionItems:sectionItems dataSourceClass:nil delegateClass:nil];
 }
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems dataSourceClass:(Class)dataSourceClass {
-    return [self easyTableViewWithSectionItems:sectionItems dataSourceClass:dataSourceClass delegateClass:nil];
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems dataSourceClass:(Class)dataSourceClass {
+    return [self dataSourceCoordinatorWithSectionItems:sectionItems dataSourceClass:dataSourceClass delegateClass:nil];
 }
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems delegateClass:(Class)delegateClass {
-    return [self easyTableViewWithSectionItems:sectionItems dataSourceClass:nil delegateClass:delegateClass];
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems delegateClass:(Class)delegateClass {
+    return [self dataSourceCoordinatorWithSectionItems:sectionItems dataSourceClass:nil delegateClass:delegateClass];
 }
 
-+ (instancetype)easyTableViewWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
++ (instancetype)dataSourceCoordinatorWithSectionItems:(NSMutableArray<SCETSectionItem *> *)sectionItems
                               dataSourceClass:(Class)dataSourceClass
                                 delegateClass:(Class)delegateClass {
     return [[self alloc] initWithSectionItems:sectionItems dataSourceClass:dataSourceClass delegateClass:delegateClass];
