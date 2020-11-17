@@ -33,8 +33,8 @@
             delegateClass = [SCETDelegate class];
         }
         
-        self.dataSource = [SCETDataSource sc_dataSourceWithSectionItem:sectionItems];
-        self.delegate = [SCETDelegate sc_delegateWithDataSource:self.dataSource];
+        self.dataSource = [dataSourceClass sc_dataSourceWithSectionItem:sectionItems];
+        self.delegate = [delegateClass sc_delegateWithDataSource:self.dataSource];
     }
     return self;
 }

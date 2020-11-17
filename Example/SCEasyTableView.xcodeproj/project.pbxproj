@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		26DF218619446026E68EA472 /* libPods-SCEasyTableView_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A43DE75A7281F6D209E796FF /* libPods-SCEasyTableView_Tests.a */; };
+		2E609B772563B3820031548E /* SCETDefaultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E609B762563B3820031548E /* SCETDefaultTableViewCell.m */; };
+		2E609B802563BBD90031548E /* SCETDefaultTableViewDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E609B7F2563BBD90031548E /* SCETDefaultTableViewDelegate.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -39,6 +41,10 @@
 /* Begin PBXFileReference section */
 		130C61FCA3C1A82B22F567B7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1F9F1366AF9CBA2C189493F7 /* Pods-SCEasyTableView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCEasyTableView_Example.release.xcconfig"; path = "Target Support Files/Pods-SCEasyTableView_Example/Pods-SCEasyTableView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2E609B752563B3810031548E /* SCETDefaultTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCETDefaultTableViewCell.h; sourceTree = "<group>"; };
+		2E609B762563B3820031548E /* SCETDefaultTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCETDefaultTableViewCell.m; sourceTree = "<group>"; };
+		2E609B7E2563BBD90031548E /* SCETDefaultTableViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SCETDefaultTableViewDelegate.h; sourceTree = "<group>"; };
+		2E609B7F2563BBD90031548E /* SCETDefaultTableViewDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SCETDefaultTableViewDelegate.m; sourceTree = "<group>"; };
 		43811729DA906EFC76278A3C /* Pods-SCEasyTableView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCEasyTableView_Tests.release.xcconfig"; path = "Target Support Files/Pods-SCEasyTableView_Tests/Pods-SCEasyTableView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		503CA06588EFCAADDAA90281 /* SCEasyTableView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SCEasyTableView.podspec; path = ../SCEasyTableView.podspec; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SCEasyTableView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCEasyTableView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +146,10 @@
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
+				2E609B752563B3810031548E /* SCETDefaultTableViewCell.h */,
+				2E609B762563B3820031548E /* SCETDefaultTableViewCell.m */,
+				2E609B7E2563BBD90031548E /* SCETDefaultTableViewDelegate.h */,
+				2E609B7F2563BBD90031548E /* SCETDefaultTableViewDelegate.m */,
 			);
 			name = "Example for SCEasyTableView";
 			path = SCEasyTableView;
@@ -247,7 +257,7 @@
 				ORGANIZATIONNAME = Samueler;
 				TargetAttributes = {
 					6003F589195388D20070C39A = {
-						DevelopmentTeam = M48D8E2LQ6;
+						DevelopmentTeam = TMCS6589FX;
 					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
@@ -348,9 +358,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E609B772563B3820031548E /* SCETDefaultTableViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* SCETAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* SCETViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				2E609B802563BBD90031548E /* SCETDefaultTableViewDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,7 +490,7 @@
 			baseConfigurationReference = FE0390B2A8FA18D6658625C7 /* Pods-SCEasyTableView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M48D8E2LQ6;
+				DEVELOPMENT_TEAM = TMCS6589FX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCEasyTableView/SCEasyTableView-Prefix.pch";
 				INFOPLIST_FILE = "SCEasyTableView/SCEasyTableView-Info.plist";
@@ -495,7 +507,7 @@
 			baseConfigurationReference = 1F9F1366AF9CBA2C189493F7 /* Pods-SCEasyTableView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = M48D8E2LQ6;
+				DEVELOPMENT_TEAM = TMCS6589FX;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SCEasyTableView/SCEasyTableView-Prefix.pch";
 				INFOPLIST_FILE = "SCEasyTableView/SCEasyTableView-Info.plist";
